@@ -1,0 +1,29 @@
+<StackLayout (loaded)="onPageLoaded()">
+    <Gridlayout rows="auto,*"class="profile-info-gridlayout">
+        <GridLayout row="0" rows = "10,auto,15,auto" columns = "10,*,10,auto,10">
+            <Label row="1" col="1" colSpan="3" class="profile-username" text="{{ username }}"></Label>
+
+            <GridLayout class="personal-motto-gridlayout" row="3" col="1" rows="20,80">
+                <Label row="0" class="personal-motto center-Text" text="Personal Motto"></Label>
+                <TextView row="1" editable="false" class="white-text-motto" text="{{ personalMotto }}"></TextView>
+            </GridLayout>
+
+            <GridLayout class="completed-gridlayout" row="3" col="3" rows="30,30,30" columns="auto,7,auto,7,auto">
+                <Label row="0" col="0" colSpan="5" class="completed-label center-Text" text="Completed"></Label>
+                <Label row="1" col="0" class="workout-text center-Text" text="Cardio"></Label>
+                <Label row="2" col="0" class="white-text center-Text" text="{{ cardioCount }}"></Label>
+                <Label row="1" col="2" class="workout-text center-Text" text="Weightlifting"></Label>
+                <Label row="2" col="2" class="white-text center-Text" text="{{ weightliftingCount }}"></Label>
+                <Label row="1" col="4" class="workout-text center-Text" text="Extreme"></Label>
+                <Label row="2" col="4" class="white-text center-Text" text="{{ extremeCount }}"></Label>
+            </GridLayout>
+
+        </GridLayout>
+
+        <GridLayout row="1" colSpan="3" rows="*,40,*" columns = "30,*,30,*,30">
+            <Button row="1" col="1" text="Edit Info" (tap)="goToEditProfile()"></Button>
+            <Button row="1" col="3" text="Goals" (tap)="goToGoals()"></Button>
+        </GridLayout>
+    </Gridlayout>
+    <app-profile-workout-details></app-profile-workout-details>
+</StackLayout>

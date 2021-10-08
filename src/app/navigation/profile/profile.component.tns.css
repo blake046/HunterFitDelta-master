@@ -1,0 +1,55 @@
+/* Add mobile styles for the component here.  */
+
+Button {
+    color: black;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+}
+
+.personal-motto-gridlayout,
+.completed-gridlayout {
+    background-color: #0376a1;
+    border-radius: 8%;
+}
+
+.profile-info-gridlayout {
+    height: 40%;
+    background-color: #00658A;
+}
+
+.profile-tabs {
+    height: 59.9%;
+}
+
+.profile-username {
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    font-style: italic;
+}
+
+.personal-motto,
+.completed-label {
+    color: white;
+    font-weight: bold;
+    height: 100%;
+    width: 100%;
+    text-decoration: underline;
+}
+
+.white-text {
+    color: white;
+    height: 100%;
+    width: 100%;
+}
+
+.white-text-motto {
+    font-size: 17px;
+    color: white;
+}
+
+.workout-text {
+    color: white;
+    font-size: 13px;
+}

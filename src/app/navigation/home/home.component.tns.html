@@ -1,0 +1,61 @@
+<ScrollView>
+    <StackLayout>
+        <GridLayout class="welcome-message-gridlayout" rows="auto,auto" columns="*">
+
+            <TextView row="0" editable="false" class="welcome-message" text="Before you start your next workout, be sure to check out some tips hand-picked from Hunter Industries very own personal fitness trainer:"></TextView>
+            <Label row="1" class="amador-link" text="Amador Porras" (tap)="amadorLink()"></Label>
+
+        </GridLayout>
+
+        <GridLayout rows="15,auto,10" columns="10,*,10">
+            <Label row="1" col="1" class="section-label" text="Cardio Tips"></Label>
+        </GridLayout>
+
+        <GridLayout *ngFor="let tip of cardioTips; let i = index" rows="auto,auto" columns="10,auto,5,*,10">
+            <Label row="0" col="1" text="{{ i+1 }}."></Label>
+            <Label row="0" col="3" text="{{ tip.title }}"></Label>
+            <TextView row="1" col="1" colSpan="3" editable="false" text="{{ tip.tipDesc }}"></TextView>
+        </GridLayout>
+
+        <GridLayout rows="15,auto,10" columns="10,*,10">
+            <Label row="1" col="1" class="section-label" text="Weightlifting Tips"></Label>
+        </GridLayout>
+
+        <GridLayout *ngFor="let tip of weightliftingTips; let i = index" rows="auto,auto" columns="10,auto,5,*,10">
+            <Label row="0" col="1" text="{{ i+1 }}."></Label>
+            <Label row="0" col="3" text="{{tip.title}}"></Label>
+            <TextView row="1" col="1" colSpan="3" class="tip-details" editable="false" text="{{ tip.tipDesc }}"></TextView>
+        </GridLayout>
+
+        <GridLayout rows="15,auto,10" columns="10,*,10">
+            <Label row="1" col="1" class="section-label" text="Nutrition Tips"></Label>
+        </GridLayout>
+
+        <GridLayout *ngFor="let tip of nutritionTips; let i = index" rows="auto,auto" columns="10,auto,5,*,10">
+            <Label row="0" col="1" text="{{ i+1 }}."></Label>
+            <Label row="0" col="3" text="{{ tip.title }}"></Label>
+            <TextView row="1" col="1" colSpan="3" editable="false" text="{{ tip.tipDesc }}"></TextView>
+        </GridLayout>
+
+        <GridLayout class="references-gridlayout" rows="10,auto,5,auto,5,auto,5,auto,30" columns="10,*,10">
+            
+            <Label row="1" col="1" class="reference-label" text="References:"></Label>
+            <GridLayout row="3" col="1" columns="5,auto,5,*,5">
+                <Label col="1" text="Cardio Tips:"></Label>
+                <Label col="3" text="Click here" (tap)="cardioLink()" class="link-labels"></Label>
+            </GridLayout>
+            
+            <GridLayout row="5" col="1" columns="5,auto,5,*,5">
+                <Label col="1" text="Weightlifting Tips:"></Label>
+                <Label col="3" text="Click here" (tap)="weightliftingLink()" class="link-labels"></Label>
+            </GridLayout>
+            
+            <GridLayout row="7" col="1" columns="5,auto,5,*,5">
+                <Label col="1" text="Nutrition Tips:"></Label>
+                <Label col="3" text="Click here" (tap)="nutritionLink()" class="link-labels"></Label>
+            </GridLayout>
+            
+        </GridLayout>
+
+    </StackLayout>
+</ScrollView>

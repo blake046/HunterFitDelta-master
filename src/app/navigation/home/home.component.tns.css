@@ -1,0 +1,45 @@
+/* Add mobile styles for the component here.  */
+
+Button {
+    color: white;
+}
+
+.welcome-message-gridlayout {
+    background-color: aliceblue;
+}
+
+.welcome-message {
+    font-weight: bold;
+    font-size: 25px;
+    font-style: italic;
+}
+
+.amador-link {
+    font-weight: bold;
+    font-size: 25px;
+    font-style: italic;
+    color: #0645AD;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.section-label {
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    background-color: #00658A;
+    color: white;
+}
+
+.reference-label {
+    font-style: italic;
+}
+
+.references-gridlayout {
+    background-color: aliceblue;
+}
+
+.link-labels {
+    color: #0645AD;
+    text-decoration: underline;
+}
